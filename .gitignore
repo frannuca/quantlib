@@ -1,4 +1,5 @@
 # Compilation artifacts
+<<<<<<< HEAD
 QuantLib*/configure
 QuantLib/quantlib-config
 QuantLib/libtool
@@ -109,6 +110,63 @@ XL-Launcher/obj/
 Makefile
 !QuantLibAddin/swig/Makefile
 Makefile.in
+=======
+configure
+quantlib-config
+libtool
+aclocal.m4
+autom4te.cache
+config.log
+config.status
+config/*
+!config/Makefile.am
+m4/*.m4
+ql/config.hpp
+ql/config.hpp.in
+ql/stamp-h1
+elc-stamp
+quantlib.elc
+quantlib.pc
+QuantLib.spec
+CMakeCache.txt
+Docs/.time-stamp
+Docs/.time-stamp-html
+Docs/.time-stamp-online
+Docs/.time-stamp-man
+Docs/reference-*/
+Docs/html/
+Docs/man/
+Examples/*/bin/
+Examples/*/build/
+Examples/*/*.trs
+build/
+lib/
+test-suite/bin/QuantLib-test-suite-*.manifest
+test-suite/build/
+test-suite/*.trs
+.vs/
+
+# Build outputs
+**/x64/Debug
+**/x64/Release
+**/Debug
+**/Release
+**/bin/*.xml
+**/bin/*.manifest
+
+# CLion
+.idea
+cmake-build-debug
+
+# Visual Studio Code
+.vscode
+
+# Artifacts created in multiple directories
+Makefile
+Makefile.in
+unity.cpp
+testCaseCollection.xml
+>>>>>>> e20559ce05555a53ada89245cac334b2337549d5
 .deps
 .libs
 *.la
@@ -116,19 +174,26 @@ Makefile.in
 *.o
 *.so
 .build-stamp
+<<<<<<< HEAD
 *.pyc
+=======
+>>>>>>> e20559ce05555a53ada89245cac334b2337549d5
 *.exe
 *.dll
 *.exp
 *.lib
 *.pdb
 *.ilk
+<<<<<<< HEAD
 *.class
+=======
+>>>>>>> e20559ce05555a53ada89245cac334b2337549d5
 *~
 *.ncb
 *.suo
 *.vcproj.*.user
 *.vcxproj.user
+<<<<<<< HEAD
 *.log
 *.sdf
 *.opensdf
@@ -183,4 +248,45 @@ QuantLibAddin/Docs/*.chm
 QuantLibAddin/Docs/doxywarnings.txt
 QuantLibXL/Docs/*.chm
 QuantLibXL/Docs/doxywarnings.txt
+=======
+*.VC.db
+*.VC.opendb
+*.log
+*.sdf
+*.opensdf
+*.pch
+*.idb
+*.ipch
+CMakeFiles
+*.cmake
+TAGS
+
+# Outputs
+Examples/BasketLosses/BasketLosses
+Examples/BermudanSwaption/BermudanSwaption
+Examples/Bonds/Bonds
+Examples/CallableBonds/CallableBonds
+Examples/CDS/CDS
+Examples/ConvertibleBonds/ConvertibleBonds
+Examples/CVAIRS/CVAIRS
+Examples/DiscreteHedging/DiscreteHedging
+Examples/EquityOption/EquityOption
+Examples/FittedBondCurve/FittedBondCurve
+Examples/FRA/FRA
+Examples/Gaussian1dModels/Gaussian1dModels
+Examples/GlobalOptimizer/GlobalOptimizer
+Examples/LatentModel/LatentModel
+Examples/MarketModels/MarketModels
+Examples/MultidimIntegral/MultidimIntegral
+Examples/Replication/Replication
+Examples/Repo/Repo
+Examples/Swap/SwapValuation
+test-suite/quantlib-test-suite
+test-suite/quantlib-benchmark
+test-suite/bin/*.exp
+test-suite/bin/*.lib
+test-suite/bin/*.pdb
+test-suite/.unit_test_profile.txt
+
+>>>>>>> e20559ce05555a53ada89245cac334b2337549d5
 

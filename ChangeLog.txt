@@ -1,0 +1,1629 @@
+commit 2c2dd00a3ecd71ae7c7607e025bba159d8687637
+Merge: 8c4ccbdd3 3f96e3a7c
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 15 May 2018 14:22:23 +0200
+
+    Merge pull request #473.
+
+commit 3f96e3a7cfde1cb5cc3ea57f645cb6509a60e39b
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 15 May 2018 13:43:24 +0200
+
+    Avoid error when using VC++2017 15.7.
+    
+    Thanks to Benedict Tan for the heads-up.
+
+ ql/experimental/math/latentmodel.hpp | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+commit 8c4ccbdd3a6af4c486d8dcdf82efccb82b776658
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 14 May 2018 12:28:18 +0200
+
+    Update list of copyrights.
+
+ Docs/pages/license.docs | 4 +++-
+ LICENSE.TXT             | 4 +++-
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 3e99d1c58a044451a0e6ba95162657124a005167
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 11 May 2018 15:13:16 +0200
+
+    Avoid breaking the VC++ preprocessor.
+    
+    It doesn't take kindly to commas in the macro argument, even
+    within brackets.
+
+ test-suite/matrices.cpp | 19 +++++++++++++------
+ 1 file changed, 13 insertions(+), 6 deletions(-)
+
+commit 43d86e72ee0ebc46f8b7ea7449928f205097814a
+Merge: 8d5f1f4ba 411718213
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 11 May 2018 11:18:04 +0200
+
+    Merge pull request #470.
+
+commit 8d5f1f4bae84ad746ae99e0a22da23a026a882cc
+Merge: 0a7f3a871 0332001fc
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 18:04:44 +0200
+
+    Merge pull request #471.
+
+commit 0a7f3a871375e5992782eceaa1cb9f64bd97b32b
+Merge: 05219b173 f2701df91
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 16:37:19 +0200
+
+    Merge pull request #468.
+
+commit 0332001fc9e038d180cde0cce609ce3b9f4a38c3
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 10 May 2018 16:19:06 +0200
+
+    change deepUpdate() implementation so that it applies to lazy objects only
+
+ ql/instruments/bond.cpp     | 4 ++--
+ ql/instruments/capfloor.cpp | 4 ++--
+ ql/instruments/swap.cpp     | 4 ++--
+ 3 files changed, 6 insertions(+), 6 deletions(-)
+
+commit c7bb466fdf88d5aa67d819691e7ca61124ae6dbe
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 10 May 2018 16:13:57 +0200
+
+    Revert "first cut at lazy floating rate coupon"
+    
+    This reverts commit ac75af8488e043dbb60e8f152a6cde1eaea35d5c.
+
+ ql/cashflows/capflooredcoupon.cpp   | 19 +++++++------------
+ ql/cashflows/capflooredcoupon.hpp   |  5 ++---
+ ql/cashflows/floatingratecoupon.cpp |  9 ++-------
+ ql/cashflows/floatingratecoupon.hpp |  8 +++-----
+ 4 files changed, 14 insertions(+), 27 deletions(-)
+
+commit 1e0d52aff25ea773eabdabb0a09e9cd8ba68384f
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 10 May 2018 16:13:50 +0200
+
+    Revert "fixes"
+    
+    This reverts commit 57eb239295db0036f5b8d34281606e5eb245aac0.
+
+ ql/cashflows/capflooredcoupon.cpp   | 4 ++++
+ ql/cashflows/capflooredcoupon.hpp   | 2 +-
+ ql/cashflows/floatingratecoupon.hpp | 2 +-
+ 3 files changed, 6 insertions(+), 2 deletions(-)
+
+commit 874eb4e42fa4e6b29f38fb54de314c661de495d9
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 10 May 2018 16:13:40 +0200
+
+    Revert "resolve diamond problem"
+    
+    This reverts commit 12ac306755ab8ccbdbac7e4766ddb33c66cffdef.
+
+ ql/event.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 0061c7c145de134230383443ccde8c6238bb35d5
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 10 May 2018 16:13:24 +0200
+
+    Revert "update lazy coupons in curve bootstrapping"
+    
+    This reverts commit baf0807f3064ffe08a2d08b8ca9d89582e3128ac.
+
+ ql/termstructures/yield/oisratehelper.cpp | 3 +--
+ ql/termstructures/yield/ratehelpers.cpp   | 4 ++--
+ 2 files changed, 3 insertions(+), 4 deletions(-)
+
+commit 411718213b8ea31fc0b579f7dc21b2f2e9bd603d
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 12:23:31 +0200
+
+    Make constructor explicit.
+
+ test-suite/quantlibbenchmark.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit e18099173e9c1365894f534f0f60aa2721b237ac
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 12:20:24 +0200
+
+    Compile on older Boost versions.
+
+ test-suite/quantlibbenchmark.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit e3a8068dd4962b1ea1e309d30c8854323436686a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 11:06:13 +0200
+
+    Enable benchmark to run with Boost.Test 1.67.
+
+ test-suite/quantlibbenchmark.cpp | 75 ++++++++++++++++++++++++----------------
+ 1 file changed, 45 insertions(+), 30 deletions(-)
+
+commit 05219b1734416c12fc1ed2a11561fc8e746ee86d
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 10 May 2018 10:33:04 +0200
+
+    Tweak a few test messages.
+
+ test-suite/fdheston.cpp        | 2 +-
+ test-suite/matrices.cpp        | 2 +-
+ test-suite/shortratemodels.cpp | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit f2701df91223ed1ab3292150caebcb06ba874e3d
+Author: 刘一铭 <ymliu6899@gmail.com>
+Date:   Wed, 9 May 2018 20:52:25 -0400
+
+    Make empty check specific to isRegular
+
+ ql/time/schedule.cpp | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+commit d147b314b937a8028bbf204cacacecd8429f2dd5
+Merge: 4cd92eec3 3988dc048
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 9 May 2018 09:57:59 +0200
+
+    Merge pull request #467.
+
+commit 026d27310d88bc721928a06e9882332a8579d18d
+Author: 刘一铭 <ymliu6899@gmail.com>
+Date:   Tue, 8 May 2018 22:20:00 -0400
+
+    Make code consistent in style
+
+ ql/time/schedule.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit ae066f3e74f5e585960dc81428411737a41b7170
+Author: 刘一铭 <ymliu6899@gmail.com>
+Date:   Tue, 8 May 2018 22:11:50 -0400
+
+    Check if isRegular is empty before poping elements
+
+ ql/time/schedule.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3988dc048b4ea238cdfcf379b397e777b746a9d5
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 18:21:50 +0200
+
+    Attach documentation to correct class.
+
+ ql/instruments/forwardrateagreement.hpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 4d15f2dad94fbd34b6145412e47a8cc159b20e6a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 18:20:45 +0200
+
+    Use client-based search in reference manual.
+    
+    Thanks to Tom Anderson for the heads-up.
+
+ Docs/quantlib.doxy | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 4cd92eec3e3e1828945bfb69c00d87db9df723aa
+Merge: a69f2622d 4e5f1cf34
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 12:22:25 +0200
+
+    Merge pull request #466.
+
+commit a69f2622df4d081c1f5ffbc05ed1f7ca2ae500ad
+Merge: f0e58f907 8e8a26e10
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 11:33:39 +0200
+
+    Merge pull request #465.
+
+commit f0e58f90762a1b2969766a380467006154aee872
+Merge: e3cfc5a1e 1b3077be8
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 10:48:46 +0200
+
+    Merge pull request #464.
+
+commit 1b3077be81c83d7028b92eee8af9a2a5e9ea5980
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 10:47:25 +0200
+
+    Update makefile.
+
+ ql/indexes/ibor/Makefile.am | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+commit 6acc386db6e2eeef1e37a401720ba232be41e5eb
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 8 May 2018 10:22:39 +0200
+
+    Update VC9 project.
+
+ QuantLib_vc9.vcproj | 16 ++++++++++++++++
+ 1 file changed, 16 insertions(+)
+
+commit 4e5f1cf3444e8102a3d57e93a55e204d1e2a5cdb
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Mon, 7 May 2018 20:53:47 +0200
+
+    improve performance
+
+ ql/cashflows/couponpricer.cpp | 5 +++--
+ ql/cashflows/couponpricer.hpp | 2 +-
+ 2 files changed, 4 insertions(+), 3 deletions(-)
+
+commit 8e8a26e104a10a3d460aae2ef407e8a2e59e4522
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sat, 5 May 2018 19:32:18 +0200
+
+    add deepUpdate impl (since frc is lazy)
+
+ ql/instruments/bond.cpp     | 12 +++++++++++-
+ ql/instruments/bond.hpp     |  4 ++++
+ ql/instruments/capfloor.cpp | 11 +++++++++++
+ ql/instruments/capfloor.hpp |  4 ++++
+ ql/instruments/swap.cpp     | 14 +++++++++++++-
+ ql/instruments/swap.hpp     |  4 ++++
+ 6 files changed, 47 insertions(+), 2 deletions(-)
+
+commit 5f4bfa493284c9e1cd0fd2f813f305788b977d5e
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sat, 5 May 2018 19:31:57 +0200
+
+    use deep update instead of explicit updates
+
+ ql/termstructures/yield/oisratehelper.cpp |  8 ++------
+ ql/termstructures/yield/ratehelpers.cpp   | 14 ++------------
+ 2 files changed, 4 insertions(+), 18 deletions(-)
+
+commit f7f2c0f8bdbcd2ef7db89aaca7fc8951be3cb7a7
+Author: Matthias Lungwitz <lungwitz@gmail.com>
+Date:   Fri, 4 May 2018 21:58:18 +0200
+
+    Add further indices.
+
+ ql/indexes/ibor/mosprime.hpp | 2 +-
+ ql/indexes/ibor/robor.hpp    | 2 +-
+ ql/indexes/ibor/wibor.hpp    | 2 +-
+ 3 files changed, 3 insertions(+), 3 deletions(-)
+
+commit d02fdc3c12f63e8af5cdf33789ac2797cb218591
+Author: Matthias Lungwitz <lungwitz@gmail.com>
+Date:   Fri, 4 May 2018 21:54:58 +0200
+
+    Add further indices.
+
+ QuantLib.vcxproj             |  4 ++++
+ QuantLib.vcxproj.filters     | 12 ++++++++++
+ ql/indexes/ibor/all.hpp      |  4 ++++
+ ql/indexes/ibor/mosprime.hpp | 55 ++++++++++++++++++++++++++++++++++++++++++
+ ql/indexes/ibor/pribor.hpp   | 57 ++++++++++++++++++++++++++++++++++++++++++++
+ ql/indexes/ibor/robor.hpp    | 55 ++++++++++++++++++++++++++++++++++++++++++
+ ql/indexes/ibor/wibor.hpp    | 55 ++++++++++++++++++++++++++++++++++++++++++
+ 7 files changed, 242 insertions(+)
+
+commit e3cfc5a1e68f89c06e24db4ba0e89cf3894e4750
+Merge: 5feb20450 dae34e10e
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 3 May 2018 12:25:41 +0200
+
+    Merge pull request #459.
+
+commit 5feb204509fe61ef85cc068317949c5e4698c0b8
+Merge: 799bf8f18 46f198199
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 3 May 2018 12:06:35 +0200
+
+    Merge pull request #461.
+
+commit 799bf8f184799655cd6d3c98a0526ba1b3fd6890
+Merge: ad1500f79 55eaf5db9
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 2 May 2018 10:35:57 +0200
+
+    Merge pull request #460.
+
+commit 46f1981999fa7be496e6bfe69672d603c7e85e87
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Tue, 1 May 2018 08:41:21 +0200
+
+    fix index
+
+ ql/experimental/coupons/lognormalcmsspreadpricer.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit dae34e10eba1e91fa6163319ee3a13515f98c293
+Author: Guillaume Horel <guillaume.horel@gmail.com>
+Date:   Fri, 27 Apr 2018 11:26:08 -0400
+
+    add withNominal
+
+ ql/instruments/makeswaption.cpp | 11 +++++++++--
+ ql/instruments/makeswaption.hpp |  2 ++
+ 2 files changed, 11 insertions(+), 2 deletions(-)
+
+commit 55eaf5db9910f554e784847baddc21272e184b7c
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 30 Apr 2018 14:48:49 +0200
+
+    Remove unused private data members.
+
+ ql/models/marketmodels/products/multistep/multistepinversefloater.cpp  | 1 -
+ ql/models/marketmodels/products/multistep/multistepinversefloater.hpp  | 1 -
+ ql/models/marketmodels/products/multistep/multistepratchet.cpp         | 2 +-
+ ql/models/marketmodels/products/multistep/multistepratchet.hpp         | 1 -
+ ql/models/marketmodels/products/multistep/multistepswap.cpp            | 2 +-
+ ql/models/marketmodels/products/multistep/multistepswap.hpp            | 1 -
+ ql/models/marketmodels/products/onestep/onestepcoterminalswaps.hpp     | 3 ---
+ .../marketmodels/products/pathwise/pathwiseproductinversefloater.cpp   | 1 -
+ .../marketmodels/products/pathwise/pathwiseproductinversefloater.hpp   | 1 -
+ 9 files changed, 2 insertions(+), 11 deletions(-)
+
+commit d4a75c9f1aae74cdf7774ea1f1cc659eb50b6aff
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 30 Apr 2018 13:20:50 +0200
+
+    Remove unused variables.
+
+ ql/experimental/varianceoption/integralhestonvarianceoptionengine.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 3e219e7174ec0730858ee0c2f15eb42db0685c9d
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 30 Apr 2018 12:41:32 +0200
+
+    Update Docker images for Travis run.
+
+ .travis.yml | 18 +++++++++---------
+ 1 file changed, 9 insertions(+), 9 deletions(-)
+
+commit ad1500f794a3f9cc7ee4156804cc4633df95677e
+Merge: 42e088f23 9bd6b83fc
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 24 Apr 2018 15:36:33 +0200
+
+    Merge pull request #452.
+
+commit 9bd6b83fc07230d0fc0cca20cd84c8964ad9c663
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 24 Apr 2018 15:15:29 +0200
+
+    Add descriptions to examples.
+
+ Docs/pages/examples.docs | 122 +++++++++++++++++++++++++++++++++++++++--------
+ 1 file changed, 102 insertions(+), 20 deletions(-)
+
+commit 4c950e765a08e883d4b1a8a35e7681cd7d24a811
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 24 Apr 2018 14:56:32 +0200
+
+    Removed tracing_example.cpp.
+    
+    The example was moved to the header file for the tracing utilities.
+
+ Examples/tracing/tracing_example.cpp | 38 ------------------------------------
+ 1 file changed, 38 deletions(-)
+
+commit 42e088f2367665a3c235fd0fbc05137292b6509d
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 23 Apr 2018 14:50:32 +0200
+
+    Add link to GitHub Learning Lab to instructions for contributing.
+
+ README.md  | 21 ++++++++++++---------
+ Readme.txt | 21 ++++++++++++---------
+ 2 files changed, 24 insertions(+), 18 deletions(-)
+
+commit 4e163830a14388cac06c054848306be165a1fbbf
+Merge: e2233fedd 1c6827ebf
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 23 Apr 2018 11:35:13 +0200
+
+    Merge pull request #454.
+
+commit 1c6827ebf029b16d4da8355c13e5bcd29351a8f2
+Author: Nick Glass <BGC-nglass@users.noreply.github.com>
+Date:   Fri, 20 Apr 2018 09:35:16 +0100
+
+    Fix Solaris Studio 12.5 c++11 build
+    
+    Fixes https://github.com/lballabio/QuantLib/issues/266
+
+ ql/pricingengines/vanilla/fddividendengine.hpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit f6495ff55ec6a89c98e94fb59fd7bb88c176497e
+Author: rkapl123 <rolandk@kapl.org>
+Date:   Sun, 15 Apr 2018 20:19:24 +0200
+
+    codacity codequality "improved" (use i)
+
+ Examples/tracing/tracing_example.cpp | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit 190d0f2007d94bb5c5caea3f7bca84c80efa9f30
+Author: rkapl123 <rolandk@kapl.org>
+Date:   Sun, 15 Apr 2018 20:19:24 +0200
+
+    codacity codequality "improved" (use i)
+
+ Examples/tracing/tracing_example.cpp | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+commit 8c37660497984adb74bec5244eb56ef2592ea843
+Author: rkapl123 <rolandk@kapl.org>
+Date:   Sun, 15 Apr 2018 18:48:33 +0200
+
+    added examples to doxydocs
+
+ Docs/pages/examples.docs             | 43 ++++++++++++++++++++++++++++++++++++
+ Docs/quantlib.doxy                   |  4 ++--
+ Examples/tracing/tracing_example.cpp | 34 ++++++++++++++++++++++++++++
+ 3 files changed, 79 insertions(+), 2 deletions(-)
+
+commit 09a073015ea0651e89728ddddac64c21b09bd87b
+Merge: 7b11c6d48 fcdd2d7bd
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 13 Apr 2018 16:49:58 +0200
+
+    Merge pull request #451.
+
+commit fcdd2d7bd9ad9da254ad435b2aa44d96bc67b068
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 12 Apr 2018 11:07:39 +0200
+
+    Remove obsolete file.
+
+ Bugs.txt    | 38 --------------------------------------
+ Makefile.am |  1 -
+ 2 files changed, 39 deletions(-)
+
+commit 7b11c6d483ce089bc2e2656f496a65a57dd71469
+Merge: 9f8aa735e d94ab29b3
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 12 Apr 2018 10:45:58 +0200
+
+    Merge pull request #444.
+
+commit 9f8aa735eb898c448142c4237ff01dc708e22ed2
+Merge: 945aa363b fab9ce1bd
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 11 Apr 2018 17:17:19 +0200
+
+    Merge pull request #450.
+
+commit fab9ce1bdbfe3c15bd136499343d837ff4331351
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 11 Apr 2018 16:58:22 +0200
+
+    Update VC++ projects.
+
+ QuantLib.vcxproj         | 1 +
+ QuantLib.vcxproj.filters | 3 +++
+ QuantLib_vc9.vcproj      | 4 ++++
+ 3 files changed, 8 insertions(+)
+
+commit bc17b3878ab9e1227a7a1d581d8ed7b5503a9d5b
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 11 Apr 2018 16:52:19 +0200
+
+    Add header to distribution.
+
+ ql/math/Makefile.am | 1 +
+ ql/math/all.hpp     | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 945aa363ba9c1e503c7263873bcd7877894e111a
+Merge: e8af6655c 8e0652a66
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 11 Apr 2018 16:36:58 +0200
+
+    Merge pull request #448.
+
+commit e8af6655cfdbee11bf0c58c14c1070ff93da5610
+Merge: e0d31c69b 09f0b0814
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 11 Apr 2018 15:50:55 +0200
+
+    Merge pull request #449.
+
+commit d94ab29b331b409f000290a42f5b774c742d2343
+Author: Roy Zywina <roy@zywina.ca>
+Date:   Sun, 8 Apr 2018 14:34:10 -0400
+
+    remove unused code, fix indentation
+
+ ql/experimental/shortrate/generalizedhullwhite.cpp | 194 +++++++----------
+ ql/experimental/shortrate/generalizedhullwhite.hpp | 235 ++++++++++-----------
+ 2 files changed, 190 insertions(+), 239 deletions(-)
+
+commit 9fa7170190741731564294a3957a5417a5a06068
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 8 Apr 2018 20:07:16 +0200
+
+    add initializers for arrays and matrices
+
+ ql/math/initializers.hpp | 91 ++++++++++++++++++++++++++++++++++++++++++++++++
+ test-suite/matrices.cpp  | 47 +++++++++++++++++++++++++
+ test-suite/matrices.hpp  |  1 +
+ 3 files changed, 139 insertions(+)
+
+commit 09f0b0814133ddbd1f3a74244cda1da406d8dca8
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 6 Apr 2018 16:35:06 +0200
+
+    Avoid use of obsolete C headers.
+
+ ql/math/errorfunction.cpp | 2 +-
+ ql/money.cpp              | 1 -
+ 2 files changed, 1 insertion(+), 2 deletions(-)
+
+commit 8e0652a66c5d9c2a430221b0a369afbd922265dc
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 5 Apr 2018 16:01:52 +0200
+
+    enable extrapolation on local adapters
+
+ ql/termstructures/volatility/optionlet/optionletstripper2.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 9271f1eb806a12875099fe560afd65dfca06e371
+Merge: 0c1e3ea41 f265aa608
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 4 Apr 2018 15:56:58 +0200
+
+    Merge pull request #446.
+
+commit 0c1e3ea414d0145f70cdccf665e375ed21614064
+Merge: a44f1d234 4b269ff86
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 4 Apr 2018 12:15:47 +0200
+
+    Merge pull request #447.
+
+commit a44f1d23485802f9e297eed6cd4dec6329199a87
+Merge: 1b2043891 ab75f808a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 4 Apr 2018 11:50:03 +0200
+
+    Merge pull request #445.
+
+commit 4b269ff866f85214184e22effca80a7f3930d414
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 3 Apr 2018 15:17:26 +0200
+
+    Use safer boost::function interface.
+    
+    Relying on null pointer will break if we ever use nullptr.
+
+ ql/math/optimization/levenbergmarquardt.cpp | 2 +-
+ ql/math/optimization/lmdif.cpp              | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+commit f265aa608425fa182311a96c426feaaf67c3768e
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Tue, 3 Apr 2018 01:11:26 +0200
+
+    do not run start/stop timer in parallel unit test case runner
+
+ test-suite/optionletstripper.cpp  |  5 ++---
+ test-suite/paralleltestrunner.hpp | 28 ++--------------------------
+ 2 files changed, 4 insertions(+), 29 deletions(-)
+
+commit 635e02a7eb2b3e386326e3f0d8eaa9e79a40b8c5
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 2 Apr 2018 23:00:55 +0200
+
+    boost 1.67 (beta 1) does not allow to register the same test case name
+    multiple times.
+
+ test-suite/asianoptions.cpp   |  2 +-
+ test-suite/barrieroption.cpp  |  2 +-
+ test-suite/basketoption.cpp   | 17 ++++++++++-------
+ test-suite/cdo.cpp            | 10 +++++++---
+ test-suite/europeanoption.cpp |  2 +-
+ test-suite/extendedtrees.cpp  |  2 +-
+ test-suite/hestonmodel.cpp    |  2 +-
+ test-suite/marketmodel.cpp    | 24 ++++++++++++++----------
+ test-suite/zabr.cpp           |  2 +-
+ 9 files changed, 37 insertions(+), 26 deletions(-)
+
+commit ab75f808ae0930afc40c726dfb44db9ee854cdbc
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 29 Mar 2018 12:28:10 +0200
+
+    Remove redundant void arguments in method signatures.
+
+ ql/experimental/catbonds/catbond.hpp      | 2 +-
+ ql/math/matrix.hpp                        | 4 ++--
+ ql/methods/montecarlo/montecarlomodel.hpp | 2 +-
+ ql/pricingengines/mcsimulation.hpp        | 2 +-
+ 4 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 2cee05e66e7eb9343759673e241001cf5935b680
+Author: Roy Zywina <roy@zywina.ca>
+Date:   Tue, 27 Mar 2018 18:27:44 -0400
+
+    remove unused variables
+
+ ql/experimental/shortrate/generalizedhullwhite.cpp | 4 ----
+ 1 file changed, 4 deletions(-)
+
+commit 0837e468b01232cf353cca83d1839af78e75696e
+Author: Roy Zywina <roy@zywina.ca>
+Date:   Tue, 27 Mar 2018 17:25:57 -0400
+
+    cleanup
+
+ ql/experimental/shortrate/generalizedhullwhite.cpp |  9 +++++++++
+ ql/experimental/shortrate/generalizedhullwhite.hpp | 12 ++++++++----
+ 2 files changed, 17 insertions(+), 4 deletions(-)
+
+commit 1b2043891d92af34615340bc33dbefa2ddb48c3f
+Merge: 67c8e69ce d55570b78
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 27 Mar 2018 15:57:31 +0200
+
+    Merge pull request #428.
+
+commit 67c8e69ced0bd5ebffb443d1ac09479bb75b0bb7
+Merge: 594c63632 138743a2b
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 27 Mar 2018 15:17:39 +0200
+
+    Merge pull request #443.
+
+commit 138743a2b324a2783335fb3cf0d6e8712cc95f6a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 27 Mar 2018 12:36:01 +0200
+
+    Add new holiday to docs.
+
+ ql/time/calendars/hungary.cpp | 4 ++--
+ ql/time/calendars/hungary.hpp | 1 +
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+commit 54cbc029ed97bdc6fb73862030a4e6246e443957
+Author: Roy Zywina <roy@zywina.ca>
+Date:   Tue, 27 Mar 2018 01:27:40 -0400
+
+    Jamshidian pricer support
+
+ ql/experimental/shortrate/generalizedhullwhite.cpp | 293 ++++++++-------------
+ ql/experimental/shortrate/generalizedhullwhite.hpp | 172 ++++++++----
+ 2 files changed, 224 insertions(+), 241 deletions(-)
+
+commit 4f0889dba3ed82cbecf79b716fd4d83214a61a91
+Author: Matthias Lungwitz <lungwitz@gmail.com>
+Date:   Mon, 26 Mar 2018 23:16:46 +0200
+
+    Add good friday holiday to hungarian calendar.
+
+ ql/time/calendars/hungary.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit 594c63632aeb0d32d8283145a55dba57b17154d1
+Merge: 459caf085 9a53d81bf
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 26 Mar 2018 12:44:53 +0200
+
+    Merge pull request #441.
+
+commit 9a53d81bf014f2e09070421612789849fd9abcaa
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Mar 2018 19:33:24 +0200
+
+    changed test suite names to be conform with jenkins junit module
+
+ test-suite/capfloor.cpp                  | 2 +-
+ test-suite/capflooredcoupon.cpp          | 2 +-
+ test-suite/covariance.cpp                | 2 +-
+ test-suite/inflationcapfloor.cpp         | 2 +-
+ test-suite/inflationcapflooredcoupon.cpp | 2 +-
+ 5 files changed, 5 insertions(+), 5 deletions(-)
+
+commit e879629e40650ad5b88ee91fc9c3dbd31e143f5c
+Author: Roy Zywina <roy@zywina.ca>
+Date:   Sat, 24 Mar 2018 22:38:24 -0400
+
+    add interpolators to GeneralizedHulWhite
+
+ ql/experimental/shortrate/generalizedhullwhite.cpp |  23 +++++
+ ql/experimental/shortrate/generalizedhullwhite.hpp | 114 +++++++++++++++++++++
+ 2 files changed, 137 insertions(+)
+
+commit 459caf085d4e8fc4f541d2f859c8fc097130922a
+Merge: f2ff4ef04 c2efda4bb
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 21 Mar 2018 13:34:14 +0100
+
+    Merge pull request #436.
+
+commit f2ff4ef048b3e45a0ae6706b15a775694fb6e300
+Merge: 65abd6e9a e9e13bf1c
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 21 Mar 2018 13:16:08 +0100
+
+    Merge pull request #435.
+
+commit 65abd6e9aaaef24abbdf4dcda1a64b9b3f1282a2
+Merge: 377a2906d 3793fcd2c
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 21 Mar 2018 11:33:20 +0100
+
+    Merge pull request #438.
+
+commit 3793fcd2cc603201afd7b044cd57ee26c98cf489
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 21 Mar 2018 11:16:26 +0100
+
+    Use the correct conventions to initialize deposit helpers.
+
+ test-suite/piecewiseyieldcurve.cpp | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+commit c2efda4bbd0765127d23aef97ab4c93607d47750
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 21 Mar 2018 08:04:48 +0100
+
+    fix drift, see ssrn reference (thanks to Seung Beom Bang for the heads up)
+
+ ql/processes/gsrprocess.cpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit e9e13bf1c8024e692f04ee3052b823d576904413
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 20 Mar 2018 17:47:13 +0100
+
+    Add download badge for latest release on Bintray.
+
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 377a2906db80bd2cfbf14c71a4f95f692b3196f5
+Merge: 0929d195e af034bd07
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 20 Mar 2018 17:41:46 +0100
+
+    Merge pull request #434.
+
+commit af034bd07b1c23ede675d8f67a70df881a880137
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Mon, 19 Mar 2018 14:43:39 +0100
+
+    add missing registration (see e.g. Swaption, FloatFloatSwaption)
+
+ ql/instruments/nonstandardswaption.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 0929d195e51e6af0f455c98340bbd419578e6c57
+Merge: 2131e9d20 e00c264dc
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 16 Mar 2018 17:17:05 +0100
+
+    Merge pull request #427.
+
+commit 2131e9d209b307370a6d621bad2858473223f345
+Merge: 330ef1a5e 034bb06f0
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 13 Mar 2018 18:37:38 +0100
+
+    Merge pull request #412.
+
+commit 330ef1a5ed0a50c6383091067f7c8f5274584fa0
+Merge: ff611d945 5054d5c5e
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 13 Mar 2018 14:49:40 +0100
+
+    Merge pull request #430.
+
+commit ff611d9456a6de2b67ccd99f024b83f32d754fad
+Merge: a042f1a32 06af67655
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 13 Mar 2018 12:43:08 +0100
+
+    Merge pull request #426.
+
+commit a042f1a32d34ed297d6242c69d0fabcc91f7bdb6
+Merge: af15b82e4 64b1e75fa
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Tue, 13 Mar 2018 11:55:35 +0100
+
+    Merge pull request #425.
+
+commit af15b82e46b18b977bf6b2b5da39ea3918143fc5
+Merge: 3fae0364f ce5261da3
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 12 Mar 2018 13:30:02 +0100
+
+    Merge pull request #424.
+
+commit 3fae0364fdbc7a9c3f75304abea15fb530a38e55
+Merge: 4fc0678e6 e32dbb97a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 12 Mar 2018 12:46:47 +0100
+
+    Merge pull request #418.
+
+commit e32dbb97a7a95c6b506a6ecbf016f58655b83726
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 12 Mar 2018 12:11:57 +0100
+
+    Update VC++ projects.
+
+ test-suite/testsuite.vcxproj         | 2 ++
+ test-suite/testsuite.vcxproj.filters | 6 ++++++
+ test-suite/testsuite_vc9.vcproj      | 8 ++++++++
+ 3 files changed, 16 insertions(+)
+
+commit 4fc0678e6ed8ce198745e6799b8d6f5440e5c7d5
+Merge: c8ae75a84 0b647e174
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 12 Mar 2018 12:06:50 +0100
+
+    Merge pull request #423.
+
+commit c8ae75a84c7ff78efef1039309c785bf67549d77
+Merge: 2f98bbf83 f0a9f6233
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 12 Mar 2018 11:41:33 +0100
+
+    Merge pull request #420.
+
+commit 06af676556b843b396df5dd1e75ca4494acf1f0c
+Author: Guillaume Horel <guillaume.horel@gmail.com>
+Date:   Fri, 9 Mar 2018 11:37:21 -0500
+
+    roll to right schedule period
+
+ ql/instruments/creditdefaultswap.cpp       | 25 ++++++++++++++-----------
+ ql/pricingengines/credit/isdacdsengine.cpp |  3 +--
+ 2 files changed, 15 insertions(+), 13 deletions(-)
+
+commit 5c9656e04feea357cb0fc27bd1fbed79ec5fd5fb
+Author: Guillaume Horel <guillaume.horel@gmail.com>
+Date:   Fri, 9 Mar 2018 11:37:04 -0500
+
+    fix comments
+
+ ql/instruments/creditdefaultswap.cpp | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+commit 4d5eb5a0594cb06ec8a9cac1f8a36084c0184ed2
+Author: Guillaume Horel <guillaume.horel@gmail.com>
+Date:   Wed, 28 Feb 2018 12:28:00 -0500
+
+    cleanup headers
+
+ ql/pricingengines/credit/isdacdsengine.cpp     | 1 -
+ ql/pricingengines/credit/midpointcdsengine.cpp | 1 -
+ 2 files changed, 2 deletions(-)
+
+commit 38fe5afc71f05468519a9f91c483ae2d31b47e1d
+Author: Guillaume Horel <guillaume.horel@gmail.com>
+Date:   Mon, 26 Feb 2018 19:56:33 -0500
+
+    fix possible bug
+
+ ql/instruments/creditdefaultswap.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit 2f98bbf835da4a77d7aa6442dd8bab43951c02ef
+Merge: 11951658b 3c82758b3
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 9 Mar 2018 12:44:52 +0100
+
+    Merge pull request #417.
+
+commit 11951658b06e0383e631c2e30ea9406f1c0ee3c4
+Merge: ebb0b2b86 ab9895937
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 9 Mar 2018 11:08:52 +0100
+
+    Merge pull request #416.
+
+commit ab989593754cd8c12091be895b6bed5a313992ef
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 9 Mar 2018 10:18:15 +0100
+
+    Remove executable bit from source files.
+
+ ql/methods/finitedifferences/schemes/impliciteulerscheme.cpp             | 0
+ ql/termstructures/volatility/equityfx/andreasenhugevolatilityinterpl.cpp | 0
+ test-suite/andreasenhugevolatilityinterpl.cpp                            | 0
+ test-suite/andreasenhugevolatilityinterpl.hpp                            | 0
+ test-suite/europeanoption.cpp                                            | 0
+ 5 files changed, 0 insertions(+), 0 deletions(-)
+
+commit dcd7ab2ccf4b7fa3c5a9125429317e36e98353d2
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Fri, 9 Mar 2018 10:14:28 +0100
+
+    Update VC9 project.
+
+ QuantLib_vc9.vcproj | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+commit ebb0b2b8679441c5f5f7068a5a91146447949047
+Merge: 2df6d2411 504cd1868
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 8 Mar 2018 15:00:47 +0100
+
+    Merge pull request #419.
+
+commit 2df6d241132049c5474d7a24f0a928f481df4158
+Merge: c33125bb1 1a22751e5
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 8 Mar 2018 14:11:27 +0100
+
+    Merge pull request #410.
+
+commit c33125bb15dd00dcffd6d0d285fba329c14a0090
+Merge: 65880e54b cd4243416
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 8 Mar 2018 12:03:04 +0100
+
+    Merge pull request #401.
+
+commit 65880e54b7527aa029500fe3e81475d021cc31e8
+Merge: ad2dcaf4c 4658853f8
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 8 Mar 2018 11:09:15 +0100
+
+    Merge pull request #407.
+
+commit ad2dcaf4c597cf2d96634e1399b1d91b015464bf
+Merge: f4854a6ee 91ffd9968
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Thu, 8 Mar 2018 10:42:21 +0100
+
+    Merge pull request #403.
+
+commit f4854a6eef36a416eeb73657a99925961bb6808a
+Merge: a3248c99a 6a9d74f97
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 7 Mar 2018 18:35:10 +0100
+
+    Merge pull request #402.
+
+commit a3248c99a13685a61e29c1c514b09132315074b0
+Merge: 23795342e 6c6320abd
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 7 Mar 2018 17:03:53 +0100
+
+    Merge pull request #399.
+
+commit 6c6320abde0e0b17ca5f44180074df81c7d766b8
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 7 Mar 2018 12:05:44 +0100
+
+    Update Visual C++ projects.
+
+ test-suite/testsuite.vcxproj         | 2 ++
+ test-suite/testsuite.vcxproj.filters | 6 ++++++
+ test-suite/testsuite_vc9.vcproj      | 8 ++++++++
+ 3 files changed, 16 insertions(+)
+
+commit 0b898319153e84b3dac78269b983dd4af1a4fcb4
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 7 Mar 2018 15:36:05 +0100
+
+    Perform calculation of underlying rate even in expired forwards.
+
+ ql/instruments/forwardrateagreement.cpp | 16 +++++++++++++---
+ ql/instruments/forwardrateagreement.hpp |  2 ++
+ 2 files changed, 15 insertions(+), 3 deletions(-)
+
+commit 5054d5c5ea709b1413d2abcc0829d5f899e6c8e1
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Tue, 6 Mar 2018 08:00:13 +0100
+
+    trigger rebuild
+
+ .../volatility/equityfx/andreasenhugevolatilityinterpl.cpp             | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit 7ee918df6f6229a826290e042915e73bb248e38e
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 4 Mar 2018 22:23:37 +0100
+
+    create copy of calibration instrument to avoid circular references if
+    calibration instrument is priced with the volatility interpolation
+    object.
+
+ .../volatility/equityfx/andreasenhugevolatilityinterpl.cpp   | 12 ++++++++----
+ .../volatility/equityfx/andreasenhugevolatilityinterpl.hpp   |  4 +---
+ 2 files changed, 9 insertions(+), 7 deletions(-)
+
+commit 3c82758b3c3c7b0623ecfa3941c790dc8f700e62
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 4 Mar 2018 17:56:14 +0100
+
+    removed std::cout
+
+ test-suite/swingoption.cpp | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit 04000da1509ba6fc836bd42758cbb223ed39a8f7
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 4 Mar 2018 16:15:00 +0100
+
+    enable all swing test cases
+
+ test-suite/swingoption.cpp | 22 +++++++++++-----------
+ 1 file changed, 11 insertions(+), 11 deletions(-)
+
+commit abcac1e3ba79e21c77646940b1ae3374d9d66e58
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 4 Mar 2018 15:40:26 +0100
+
+    decrease tolerance
+
+ test-suite/swingoption.cpp | 26 ++++++++++++++------------
+ 1 file changed, 14 insertions(+), 12 deletions(-)
+
+commit 504cd1868ab940b9c32194205d9ab4db9047613f
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 4 Mar 2018 14:46:15 +0100
+
+    keep the explicit declaration
+
+ ql/termstructures/volatility/equityfx/hestonblackvolsurface.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit b10f0b19ac8b15c5bc2746f8a0bee4568e8d2df7
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sat, 3 Mar 2018 19:02:41 +0100
+
+    do not reallocate memory in case the size is reduced
+
+ ql/math/array.hpp    | 7 +++++--
+ test-suite/array.cpp | 4 ++++
+ 2 files changed, 9 insertions(+), 2 deletions(-)
+
+commit e00c264dc12cfd3f23406aea868083909cd91caa
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Fri, 2 Mar 2018 21:13:58 +0100
+
+    remove superfluous calls
+
+ ql/termstructures/yield/ratehelpers.cpp | 2 --
+ 1 file changed, 2 deletions(-)
+
+commit d55570b7824dc09835f408ad4ccfcdc20c1bc4b0
+Author: Pepe <japari@users.noreply.github.com>
+Date:   Fri, 2 Mar 2018 12:26:49 +0100
+
+    Update onefactoraffinesurvival.hpp
+    
+    Do not use the dynamics but the short rate process instead. This was assuming a transformation it doesn't need to be always true.
+
+ ql/experimental/credit/onefactoraffinesurvival.hpp | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+commit 3c90722c11091ab774fb88ad7eb889d6f19fcf6d
+Author: Pepe <japari@users.noreply.github.com>
+Date:   Fri, 2 Mar 2018 10:18:30 +0100
+
+    Update interpolatedaffinehazardratecurve.hpp
+    
+    The interpolated hazard rates are the deterministic component of the extended affine model and these are allowed to be negative.
+
+ ql/experimental/credit/interpolatedaffinehazardratecurve.hpp | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 1e313db2f84387093dbf78a8818e772298070231
+Author: Pepe <japari@users.noreply.github.com>
+Date:   Fri, 2 Mar 2018 10:13:06 +0100
+
+    Update interpolatedaffinehazardratecurve.hpp
+    
+    Base constructor not being called.
+
+ ql/experimental/credit/interpolatedaffinehazardratecurve.hpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit baf0807f3064ffe08a2d08b8ca9d89582e3128ac
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Thu, 1 Mar 2018 10:01:04 +0100
+
+    update lazy coupons in curve bootstrapping
+
+ ql/termstructures/yield/oisratehelper.cpp |  5 +++++
+ ql/termstructures/yield/ratehelpers.cpp   | 12 ++++++++++++
+ 2 files changed, 17 insertions(+)
+
+commit 12ac306755ab8ccbdbac7e4766ddb33c66cffdef
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 28 Feb 2018 21:01:35 +0100
+
+    resolve diamond problem
+
+ ql/event.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 57eb239295db0036f5b8d34281606e5eb245aac0
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 28 Feb 2018 21:01:03 +0100
+
+    fixes
+
+ ql/cashflows/capflooredcoupon.cpp   | 4 ----
+ ql/cashflows/capflooredcoupon.hpp   | 2 +-
+ ql/cashflows/floatingratecoupon.hpp | 2 +-
+ 3 files changed, 2 insertions(+), 6 deletions(-)
+
+commit ac75af8488e043dbb60e8f152a6cde1eaea35d5c
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 28 Feb 2018 20:52:24 +0100
+
+    first cut at lazy floating rate coupon
+
+ ql/cashflows/capflooredcoupon.cpp   | 19 ++++++++++++-------
+ ql/cashflows/capflooredcoupon.hpp   |  5 +++--
+ ql/cashflows/floatingratecoupon.cpp |  9 +++++++--
+ ql/cashflows/floatingratecoupon.hpp |  8 +++++---
+ 4 files changed, 27 insertions(+), 14 deletions(-)
+
+commit 64b1e75faebd1e020df7fc89d56b4d4665c011e8
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 28 Feb 2018 18:23:06 +0100
+
+    fix dc, add other vol types
+
+ ql/experimental/coupons/quantocouponpricer.cpp | 18 +++++++++++++-----
+ 1 file changed, 13 insertions(+), 5 deletions(-)
+
+commit ce5261da3ffc22e40db95c139d1d9e400c2a3c97
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 28 Feb 2018 11:27:32 +0100
+
+    Don't generate man files from Doxygen.
+
+ Docs/Makefile.am   | 20 ++++----------------
+ Docs/quantlib.doxy |  2 +-
+ Makefile.am        |  4 +---
+ 3 files changed, 6 insertions(+), 20 deletions(-)
+
+commit 852aef74f1e0e4ab71a777679fc2a62820b8bf2a
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Wed, 28 Feb 2018 11:13:24 +0100
+
+    Remove obsolete example pages from docs.
+
+ Docs/Examples/history_iterators.cpp                | 32 ---------
+ Docs/Examples/tracing_example.cpp                  | 50 ---------------
+ Docs/Makefile.am                                   |  3 +-
+ Docs/pages/examples.docs                           | 75 ----------------------
+ Docs/quantlib.doxy                                 | 10 +--
+ ql/experimental/callablebonds/callablebond.hpp     |  4 --
+ ql/instruments/compositeinstrument.hpp             |  5 --
+ ql/instruments/fixedratebondforward.hpp            |  5 --
+ .../yield/fittedbonddiscountcurve.hpp              |  5 --
+ ql/utilities/tracing.hpp                           | 65 ++++++++++---------
+ 10 files changed, 40 insertions(+), 214 deletions(-)
+
+commit ed6f6f9718f839fea0c2266110c0f4b9e603084b
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Wed, 28 Feb 2018 09:05:20 +0100
+
+    do not need virtual inheritance
+
+ ql/experimental/coupons/swapspreadindex.hpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 0b647e1749809564340a36a7a84c6df696c19888
+Author: Matthias Lungwitz <lungwitz@gmail.com>
+Date:   Tue, 27 Feb 2018 22:11:24 +0100
+
+    Additional Turkey Holidays > 2014.
+
+ ql/time/calendars/turkey.cpp | 145 ++++++++++++++++++++++++++++++++++++++++++-
+ ql/time/calendars/turkey.hpp |   7 ++-
+ 2 files changed, 149 insertions(+), 3 deletions(-)
+
+commit 890276c42a254031508f3ecccf52e4c4899adefc
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Tue, 27 Feb 2018 15:46:06 +0100
+
+    fixes
+
+ ql/experimental/coupons/lognormalcmsspreadpricer.cpp | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+commit 34efd494faaa4555c27ed70ffb7c8a540e50513c
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Tue, 27 Feb 2018 15:32:51 +0100
+
+    use discount member variable, set this to one for past dates
+
+ .../coupons/lognormalcmsspreadpricer.cpp           | 27 +++++++++-------------
+ .../coupons/lognormalcmsspreadpricer.hpp           |  1 +
+ 2 files changed, 12 insertions(+), 16 deletions(-)
+
+commit f0a9f62338951eef913a63e10ee8092fee7dc2f3
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Tue, 27 Feb 2018 09:11:42 +0100
+
+    add missing observable registration
+
+ ql/instruments/bond.cpp | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit fcec6aa7224ffee1d1de0827fcbb272803fde3b3
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 26 Feb 2018 17:41:49 +0100
+
+    trigger build
+
+ ql/methods/finitedifferences/meshers/fdmblackscholesmesher.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit c3dc184fb4bcb64dbf088ee3f7b34540cc8b1e6e
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 26 Feb 2018 16:23:58 +0100
+
+    speed-up some long running test cases
+
+ .../meshers/fdmhestonvariancemesher.cpp            |  4 +-
+ .../volatility/equityfx/hestonblackvolsurface.cpp  | 19 +++---
+ .../volatility/equityfx/hestonblackvolsurface.hpp  |  8 ++-
+ test-suite/fdheston.cpp                            | 67 ++++++++++++++++++----
+ test-suite/fdheston.hpp                            |  1 +
+ test-suite/hestonmodel.cpp                         |  6 +-
+ test-suite/hestonslvmodel.cpp                      | 10 ++--
+ test-suite/hybridhestonhullwhiteprocess.cpp        |  4 +-
+ test-suite/normalclvmodel.cpp                      | 10 ++--
+ test-suite/riskneutraldensitycalculator.cpp        |  5 +-
+ 10 files changed, 95 insertions(+), 39 deletions(-)
+
+commit 42ac1a5bc47ad37cdd741fad764ef2815b4ef86e
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 16:05:48 +0100
+
+    remove unnecessary includes
+
+ test-suite/cmsspread.cpp | 9 ---------
+ 1 file changed, 9 deletions(-)
+
+commit 793b2ccb060dd4207a2e9732e4e0e624105558a1
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 15:56:01 +0100
+
+    no variadic templates
+
+ test-suite/cmsspread.cpp | 69 ++++++++++++++++++++++++++----------------------
+ 1 file changed, 37 insertions(+), 32 deletions(-)
+
+commit bae6f7876afbcbe743c075655298f294598366ab
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 15:42:38 +0100
+
+    re-trigger build
+
+ ql/methods/finitedifferences/meshers/fdmblackscholesmesher.cpp | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+
+commit bddf5189641033e63207b12bd51ab5c863d5779e
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 15:00:40 +0100
+
+    declare one parameter constructors explicit
+
+ ql/math/integrals/gaussianorthogonalpolynomial.hpp |  8 ++++----
+ ql/math/integrals/gaussianquadratures.hpp          | 10 +++++-----
+ 2 files changed, 9 insertions(+), 9 deletions(-)
+
+commit 894089806c64279d05bcf6efb8051bd5c8f5dacc
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 14:34:15 +0100
+
+    re-trigger build
+
+ .../finitedifferences/meshers/fdmblackscholesmesher.cpp    | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+
+commit 9b117f69d7dd6fc44b23e458f47124f75854b9fa
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 14:17:23 +0100
+
+    remove auto
+
+ test-suite/cmsspread.cpp | 65 ++++++++++++++++++++++++++----------------------
+ 1 file changed, 35 insertions(+), 30 deletions(-)
+
+commit 4bb93dea79cde7cb8e2f2085d153c60acd7ef0d4
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 14:15:46 +0100
+
+    removed unused variable
+
+ test-suite/fdmlinearop.cpp | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+commit b47fff45d6b3fa118c737ebe16f1a257ac85fbeb
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 14:13:27 +0100
+
+    add unit test for cms spread (still has C++11)
+
+ test-suite/Makefile.am           |   1 +
+ test-suite/cmsspread.cpp         | 352 +++++++++++++++++++++++++++++++++++++++
+ test-suite/cmsspread.hpp         |  35 ++++
+ test-suite/quantlibtestsuite.cpp |   2 +
+ 4 files changed, 390 insertions(+)
+
+commit 3818f19ae083eb9d775955912e5eef49da2bb4d3
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 13:40:07 +0100
+
+    added missing include statement for make_shared
+
+ test-suite/europeanoption.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit b245bcbb54e7f3db34e75cfdaa2d31d3e697034b
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 12:56:23 +0100
+
+    enable all test
+
+ test-suite/europeanoption.cpp | 56 +++++++++++++++++++++----------------------
+ 1 file changed, 28 insertions(+), 28 deletions(-)
+
+commit 562f0e2cb8ce7e46aa02ff1035e9b39cba09c1f9
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 12:48:24 +0100
+
+    added test with discrete dividends
+
+ .../schemes/methodoflinesscheme.cpp                |   2 +-
+ test-suite/europeanoption.cpp                      | 105 ++++++++++++++-------
+ 2 files changed, 71 insertions(+), 36 deletions(-)
+
+commit fdf8ceca89e14e0f229b8534c3c589786c882bc4
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 12:16:09 +0100
+
+    add explanation why fixing and not forecastFixing is used
+
+ ql/experimental/coupons/swapspreadindex.hpp | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+commit d3a40149d5199e4a8022a3e55c8c9ec4d9706f14
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 12:07:38 +0100
+
+    added scheme files
+
+ .../schemes/methodoflinesscheme.cpp                | 77 ++++++++++++++++++++++
+ .../schemes/methodoflinesscheme.hpp                | 63 ++++++++++++++++++
+ 2 files changed, 140 insertions(+)
+
+commit 2e012b79a413afcb9acf53db39ae418654996f6d
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 11:52:58 +0100
+
+    update visual studio project files
+
+ QuantLib.vcxproj         | 4 +++-
+ QuantLib.vcxproj.filters | 8 +++++++-
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+commit 4203aa1017878dfda1dbe6a70271ca1a888b409f
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 25 Feb 2018 11:45:58 +0100
+
+    added more tests
+
+ .../schemes/impliciteulerscheme.cpp                |  5 +-
+ test-suite/europeanoption.cpp                      | 70 +++++++++++++++++-----
+ test-suite/europeanoption.hpp                      |  2 +-
+ 3 files changed, 59 insertions(+), 18 deletions(-)
+
+commit 6ba6c790b8723f5018589d68c14972af8c0a8fb2
+Author: Peter Caspers <peter.caspers@quaternion.com>
+Date:   Sun, 25 Feb 2018 10:12:13 +0100
+
+    use bachelier formula instead of numerical integration
+
+ .../coupons/lognormalcmsspreadpricer.cpp           | 24 +++++++++++++---------
+ .../coupons/lognormalcmsspreadpricer.hpp           | 10 +++++----
+ 2 files changed, 20 insertions(+), 14 deletions(-)
+
+commit 5c94c3fb8bc8614c49179984c98d4259748c8b34
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Tue, 20 Feb 2018 21:51:14 +0100
+
+    added new FDM scheme: Methods of Lines
+
+ ql/methods/finitedifferences/schemes/Makefile.am   |  2 +
+ ql/methods/finitedifferences/schemes/all.hpp       |  1 +
+ .../solvers/fdmbackwardsolver.cpp                  | 16 ++++
+ .../solvers/fdmbackwardsolver.hpp                  |  5 +-
+ test-suite/europeanoption.cpp                      | 54 +++++++++++++
+ test-suite/europeanoption.hpp                      |  2 +
+ test-suite/fdheston.cpp                            | 93 +++++++++++++++++++++-
+ test-suite/fdheston.hpp                            |  1 +
+ 8 files changed, 172 insertions(+), 2 deletions(-)
+
+commit 9d7b31f1bb203ed2ace8b82602cec4974c75d571
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 18 Feb 2018 10:48:10 +0100
+
+    added resize function to Array in order to make Array compatible with
+    boost odeint package
+
+ ql/math/array.hpp    |  9 +++++++++
+ test-suite/array.cpp | 26 ++++++++++++++++++++++++++
+ test-suite/array.hpp |  1 +
+ 3 files changed, 36 insertions(+)
+
+commit 034bb06f0e3f68548072d2a7a98aa02f9ae91edd
+Author: QuantLab <quantlab.io@gmail.com>
+Date:   Tue, 13 Feb 2018 18:12:25 +0800
+
+    fix bit operator
+
+ ql/math/matrixutilities/svd.cpp | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+commit ea940956fbd901c93f7bce0db90f14970f4581fb
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 12 Feb 2018 19:47:21 +0100
+
+    formatting
+
+ .../barrier/fdblackscholesbarrierengine.cpp        | 24 +++++++++++-----------
+ 1 file changed, 12 insertions(+), 12 deletions(-)
+
+commit fe83fe61bdde52fc4eb5b7a12c0deee95586ee48
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 12 Feb 2018 19:39:35 +0100
+
+    added discrete dividends to mesher in Barrier engines
+
+ .../barrier/fdblackscholesbarrierengine.cpp        |  7 +-
+ .../barrier/fdblackscholesrebateengine.cpp         |  7 +-
+ .../barrier/fdhestonbarrierengine.cpp              | 11 ++-
+ ql/pricingengines/barrier/fdhestonrebateengine.cpp |  9 +-
+ test-suite/barrieroption.cpp                       | 95 +++++++++++++++++++++-
+ test-suite/barrieroption.hpp                       |  2 +
+ test-suite/swingoption.cpp                         | 10 ++-
+ 7 files changed, 125 insertions(+), 16 deletions(-)
+
+commit 1974cfc628ef09fd9abe57edc9e61c0cc85f6c5d
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Mon, 12 Feb 2018 14:25:34 +0100
+
+    added test case for high interest rates
+
+ .../meshers/fdmblackscholesmesher.cpp              |  8 +-
+ test-suite/fdmlinearop.cpp                         | 91 +++++++++++++++++++---
+ test-suite/fdmlinearop.hpp                         |  3 +-
+ 3 files changed, 86 insertions(+), 16 deletions(-)
+
+commit 1a22751e573b4e49d97831c91549a8e9bb04d35d
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sun, 11 Feb 2018 20:32:44 +0100
+
+    fixed bug in testLagrangeInterpolationOnChebyshevPoints
+
+ test-suite/interpolations.cpp | 24 ++++++++++++++----------
+ 1 file changed, 14 insertions(+), 10 deletions(-)
+
+commit 4658853f8614cb9c167519162e85e0960b15f9c3
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Tue, 6 Feb 2018 07:44:33 +0100
+
+    re-trigger build
+
+ test-suite/shortratemodels.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit eed21f6f659e3c9dc04b13f4f09860dbbcbc40c3
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Tue, 6 Feb 2018 07:23:38 +0100
+
+    added CIR++ test case
+
+ test-suite/shortratemodels.cpp | 34 ++++++++++++++++++++++++++++++++++
+ test-suite/shortratemodels.hpp |  1 +
+ 2 files changed, 35 insertions(+)
+
+commit 23795342edc112c9ee4b738b2baaa5f5e9a206f3
+Author: Luigi Ballabio <luigi.ballabio@gmail.com>
+Date:   Mon, 2 Oct 2017 13:02:26 +0200
+
+    Increase version number to 1.13.
+
+ configure.ac   | 2 +-
+ ql/version.hpp | 8 ++++----
+ 2 files changed, 5 insertions(+), 5 deletions(-)
+
+commit 91ffd9968f9ae47f7047ab08cdf95218ebfd2d78
+Author: Weston Steimel <weston.steimel@gmail.com>
+Date:   Wed, 31 Jan 2018 22:37:35 +0000
+
+    Initialize processes vestor to size of 2.
+    
+    Signed-off-by: Weston Steimel <weston.steimel@gmail.com>
+
+ ql/models/shortrate/twofactormodel.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3b2c0e3e5350d81eb98cb28d5401a5e33a1cc10a
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Wed, 31 Jan 2018 14:28:26 +0100
+
+    improved Black-SCholes mesher to better deal with high dividend/low
+    volatiltiy scenarios
+
+ .../meshers/fdmblackscholesmesher.cpp              | 47 +++++++++++--
+ .../meshers/fdmblackscholesmesher.hpp              |  4 +-
+ .../vanilla/fdblackscholesvanillaengine.cpp        |  3 +-
+ .../vanilla/fdhestonhullwhitevanillaengine.cpp     |  3 +-
+ .../vanilla/fdhestonvanillaengine.cpp              |  3 +-
+ test-suite/fdmlinearop.cpp                         | 80 +++++++++++++++++++++-
+ test-suite/fdmlinearop.hpp                         |  1 +
+ 7 files changed, 132 insertions(+), 9 deletions(-)
+
+commit 6a9d74f97fd3c32cb85f2673d1a121630299c086
+Author: Matthias Lungwitz <lungwitz@gmail.com>
+Date:   Mon, 29 Jan 2018 22:54:56 +0100
+
+    Add new good friday holiday.
+
+ ql/time/calendars/czechrepublic.cpp | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit cd4243416de6414cdcd9c3c417fa2b575a7b3bf8
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sat, 27 Jan 2018 20:37:16 +0100
+
+    reduce runtime and memory footprint of HestonSLV Monte-Carlo calibration
+    test case
+
+ test-suite/hestonslvmodel.cpp | 16 +++++++---------
+ 1 file changed, 7 insertions(+), 9 deletions(-)
+
+commit 5e1d7d1cbc903f2ae856dfe34bd7c190b253d442
+Author: klausspanderen <klaus@spanderen.de>
+Date:   Sat, 27 Jan 2018 19:55:00 +0100
+
+    fixed test cases on power pc cpu
+
+ ql/cashflows/rangeaccrual.cpp | 2 +-
+ test-suite/matrices.cpp       | 5 ++++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
+
+commit cce13d4c20a1d24dd2911924dd35235d5eb6ca67
+Author: Tom Anderson <twic@urchin.earth.li>
+Date:   Fri, 26 Jan 2018 17:22:32 +0000
+
+    Attempt to appease older compilers
+
+ test-suite/forwardrateagreement.cpp | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+
+commit 1a00b7265763ca5a02d6cb34c6f726055e626f4a
+Author: Tom Anderson <twic@urchin.earth.li>
+Date:   Wed, 24 Jan 2018 18:29:24 +0000
+
+    Don't query the curve in the ForwardRateAgreement constructor (fixes #371)
+
+ ql/instruments/forwardrateagreement.cpp |  7 ---
+ test-suite/Makefile.am                  |  1 +
+ test-suite/forwardrateagreement.cpp     | 87 +++++++++++++++++++++++++++++++++
+ test-suite/forwardrateagreement.hpp     | 34 +++++++++++++
+ test-suite/quantlibtestsuite.cpp        |  4 +-
+ 5 files changed, 125 insertions(+), 8 deletions(-)
